@@ -1,0 +1,971 @@
+/*
+Theme Name: six2eight
+Theme URI: https://example.com
+Author: Your Name
+Author URI: https://example.com
+Description: A professional WordPress theme for six2eight with modern typography
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: six2eight
+Domain Path: /languages
+Requires at least: 5.0
+Requires PHP: 7.4
+*/
+
+/* ===================================================
+   FONT IMPORTS & CSS VARIABLES
+   =================================================== */
+
+/* Import Custom PP Editorial Old Font - Local Files */
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-ultrabold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-ultrabolditalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-ultralight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/wp-content/themes/six2eight/assets/fonts/ppeditorialold-ultralightitalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Import Inter Tight Font - Modern professional typeface (fallback) */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+  /* Color Variables */
+  --color-primary: #00B98B;
+  --color-secondary: #008B6F;
+  --color-heading: #2D2D34;
+  --color-text: #2D2D34;
+  --color-border: #e5e5e5;
+  --color-bg: #f9f9f9;
+  --color-white: #fff;
+  --color-light-gray: #666;
+
+  /* Typography Variables */
+  --font-family: 'Inter Tight', sans-serif;
+  --font-heading: 'Inter Tight', sans-serif;
+  --font-body: 'Inter Tight', sans-serif;
+  --font-secondary: 'PP Editorial Old', 'Inter Tight', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-ultrabold: 900;
+  --font-weight-ultralight: 300;
+
+  /* Font Size Scales */
+  --fs-h1: 72px;
+  --fs-h2: 60px;
+  --fs-h3: 40px;
+  --fs-h4: 32px;
+  --fs-h5: 24px;
+  --fs-h6: 20px;
+  --fs-body: 18px;
+  --fs-small: 14px;
+
+  /* Line Height Scales */
+  --lh-h1: 72px;
+  --lh-h2: 72px;
+  --lh-h3: 48px;
+  --lh-h4: 40px;
+  --lh-h5: 32px;
+  --lh-h6: 28px;
+  --lh-body: 26px;
+  --lh-small: 22px;
+
+  /* Spacing Variables */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 60px;
+
+  /* Transition */
+  --transition: 0.3s ease;
+}
+
+
+/* ===================================================
+   RESET & BASE STYLES
+   =================================================== */
+
+/* Universal reset - consistent across all browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height layout */
+html, body {
+  height: 100%;
+}
+
+/* ===================================================
+   BODY TYPOGRAPHY & BASE STYLES
+   =================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* ===================================================
+   HEADING TYPOGRAPHY HIERARCHY
+   =================================================== */
+
+/* H1 Headings - Main page titles */
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* H2 Headings - Secondary titles */
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* H3 Headings - Section titles */
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  margin-bottom: var(--spacing-md);
+}
+
+/* H4 Headings - Subsection titles */
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  margin-bottom: var(--spacing-md);
+}
+
+/* H5 Headings - Minor titles */
+h5 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h5);
+  line-height: var(--lh-h5);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* H6 Headings - Smallest titles */
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-h6);
+  line-height: var(--lh-h6);
+  margin-bottom: var(--spacing-sm);
+}
+body .elementor-widget-heading .elementor-heading-title {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--fs-h2);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+    font-family: var(--font-family);
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+/* Custom Font Classes for Elementor */
+.font-secondary .elementor-heading-title,
+.font-secondary{
+    font-family: var(--font-secondary) !important;
+}
+.font-weight-300{
+    font-weight: var(--font-weight-ultralight);
+}
+
+.font-weight-400{
+    font-weight: var(--font-weight-normal);
+}
+
+.font-weight-500{
+    font-weight: var(--font-weight-medium);
+}
+
+.font-weight-600{
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-weight-700{
+    font-weight: var(--font-weight-bold);
+}
+
+.font-weight-900{
+    font-weight: var(--font-weight-ultrabold);
+}
+.font-style-italic{
+    font-style: italic;
+}
+
+
+/* ===================================================
+   PARAGRAPH & TEXT ELEMENTS
+   =================================================== */
+
+/* Professional paragraph spacing */
+p {
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Small text styling */
+small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* Link styling with smooth transitions */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* Link hover state */
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+
+
+/* ========================================
+   HEADER & BRANDING STYLES
+   ======================================== */
+/* Main header container with clean white background */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+}
+
+/* Header container layout - flex for left logo and right menu */
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header links color */
+.site-header a {
+  color: #2D2D34;
+}
+
+/* Branding section with logo and title */
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo styling */
+.site-branding img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* Site title typography */
+.site-title {
+  color: #2D2D34;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 36px;
+}
+
+/* Site description typography */
+.site-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+/* Main navigation list */
+.main-navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navigation links */
+.main-navigation a {
+  display: block;
+  padding: 5px 0;
+  color: #2D2D34;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Navigation hover state */
+.main-navigation a:hover {
+  color: #0073aa;
+}
+
+/* ========================================
+   MOBILE MENU TOGGLE
+   ======================================== */
+/* Mobile menu toggle button hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2D2D34;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+/* Mobile menu toggle hover state */
+.menu-toggle:hover {
+  color: #0073aa;
+}
+
+/* ========================================
+   CANVAS MENU (MOBILE SIDEBAR)
+   ======================================== */
+/* ========================================
+   CANVAS MENU (MOBILE SIDEBAR)
+   ======================================== */
+/* Canvas menu fixed sidebar navigation */
+.canvas-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+/* Canvas menu active state */
+.canvas-menu.active {
+  left: 0;
+}
+
+/* Canvas menu close button */
+.canvas-menu-close {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #2D2D34;
+  padding: 20px;
+  width: 100%;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+/* Canvas menu close button hover state */
+.canvas-menu-close:hover {
+  color: #0073aa;
+}
+
+/* Canvas menu list */
+.canvas-menu ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+/* Canvas menu list items */
+.canvas-menu ul li {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Canvas menu links */
+.canvas-menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #2D2D34;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Canvas menu links hover state */
+.canvas-menu ul li a:hover {
+  background-color: #f5f5f5;
+  color: #0073aa;
+  padding-left: 25px;
+}
+
+/* ========================================
+   CANVAS MENU OVERLAY
+   ======================================== */
+/* Overlay backdrop for canvas menu */
+.canvas-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Overlay active state */
+.canvas-overlay.active {
+  display: block;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ======================================== */
+/* Responsive layout at 1024px breakpoint - show mobile menu */
+@media (max-width: 1023px) {
+  /* Hide desktop navigation */
+  .main-navigation {
+    display: none;
+  }
+
+  /* Show mobile menu toggle */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Display canvas menu on mobile */
+  .canvas-menu {
+    display: block;
+  }
+}
+
+
+/* ========================================
+   LAYOUT & CONTAINER STYLES
+   ======================================== */
+/* Main container with max-width and responsive padding */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Content area grid layout */
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Responsive content area - single column on tablet */
+@media (max-width: 768px) {
+  .content-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   POST STYLES
+   ======================================== */
+/* Individual post container */
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Post container hover state */
+.post:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Post title typography */
+.post-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2D2D34;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Post meta information */
+.post-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 22px;
+}
+
+/* Post content */
+.post-content {
+  line-height: 1.6;
+  color: #2D2D34;
+}
+
+/* Post content images */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+
+/* ========================================
+   SIDEBAR STYLES
+   ======================================== */
+/* Sidebar container */
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+/* Widget container */
+.widget {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.widget h2{
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #2D2D34;
+}
+
+/* Last widget - remove bottom border */
+.widget:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Widget title typography */
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2D2D34;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0073aa;
+}
+
+/* Widget list styles */
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Widget list items */
+.widget li {
+  padding: 5px 0;
+  line-height: 24px;
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+/* Footer container */
+.site-footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Footer link styling */
+.site-footer a {
+  color: #0073aa;
+  transition: color 0.3s ease;
+}
+
+/* Footer link hover state */
+.site-footer a:hover {
+  color: #005a87;
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   COMMENTS SECTION STYLES
+   ======================================== */
+/* Comments area container */
+.comments-area {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+/* Comments list */
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual comment styling */
+.comment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Last comment - remove bottom border */
+.comment:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Comment author name */
+.comment-author {
+  font-weight: bold;
+  color: #2D2D34;
+  margin-bottom: 5px;
+}
+
+/* Comment form section */
+.comment-form {
+  margin-top: 20px;
+}
+
+/* Comment form paragraphs */
+.comment-form p {
+  margin-bottom: 15px;
+}
+
+/* Comment form labels */
+.comment-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2D2D34;
+}
+
+/* Comment form input fields */
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: #2D2D34;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+/* Comment form input hover state */
+.comment-form input:hover,
+.comment-form textarea:hover {
+  border-color: #bbb;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #0073aa;
+  outline: none;
+  background-color: #fff;
+}
+.comment-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* ─── THE CORE FIX ─────────────────────────────────────────── */
+
+.six2eight-project-item .six2eight-normal-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0s;
+    pointer-events: auto;
+    height: auto;
+}
+
+.six2eight-project-item.active .six2eight-normal-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
+}
+
+.six2eight-project-item .project-active-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.3s ease 0s,
+    transform 0.3s ease 0s,
+    visibility 0s linear 0.3s;
+}
+
+.six2eight-project-item.active .project-active-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+    transition: opacity 0.35s ease 0.2s,
+    transform 0.35s ease 0.2s,
+    visibility 0s linear 0s;
+}
+
+.six2eight-title {
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+.six2eight-subtitle {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.six2eight-short-description {
+    font-weight: 600;
+    font-size: 20px;
+    color: #00B98B;
+    margin-bottom: 18px;
+}
+.six2eight-project-item .six2eight-project-content {
+    max-width: 724px;
+}
+.six2eight-project-title-visible {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    font-weight: 400;
+    color: #6B6B7B;
+}
+.six2eight-projects-wrapper {
+    display: block;
+    width: 100%;
+}
+.six2eight-project-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+    font-weight: 400;
+    color: #2D2D34;
+}
+.six2eight-project-title a{
+    color: #2D2D34;
+    transition: 0.4s;
+}
+.six2eight-project-title a:hover{
+    color: var(--color-primary);
+}
+.six2eight-projects-grid {
+    display: flex;
+    gap: 20px;
+}
+.six2eight-project-item {
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(11.75px);
+    min-height: 518px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    min-width: 98px;
+}
+.six2eight-project-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    display: block;
+    border-radius: 16px !important;
+    transform: scaleX(0);
+    transform-origin: left center;
+    width: 100%;
+}
+.six2eight-project-item.active .six2eight-project-image img {
+    transform: scaleX(1);
+}
+.six2eight-project-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 20px;
+}
+.six2eight-projects-wrapper .six2eight-normal-content {
+    height: 468px;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.six2eight-projects-wrapper .six2eight-normal-content .six2eight-project-title-visible {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    font-weight: 400;
+    color: #656273;
+    line-height: 1.2;
+    text-align: center;
+}
+.six2eight-projects-wrapper .six2eight-icon {
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.six2eight-project-item.active {
+    z-index: 0;
+}
+
+/* ========================================
+   RESPONSIVE PROJECT WIDGET
+   ======================================== */
+
+/* Tablet Breakpoint - 768px */
+@media (max-width: 991px) {
+    .six2eight-projects-grid{
+        display: block;
+    }
+    .six2eight-project-item {
+        margin-bottom: 20px;
+    }
+    .six2eight-project-item,
+    .six2eight-projects-wrapper .six2eight-normal-content,
+    .six2eight-projects-wrapper .six2eight-normal-content{
+        height: auto;
+        min-height: auto;
+    }
+    .six2eight-projects-wrapper .six2eight-normal-content {
+        flex-direction: row-reverse;
+    }
+    .six2eight-projects-wrapper .six2eight-normal-content .six2eight-project-title-visible {
+        writing-mode: unset;
+        transform: rotate(0deg);
+    }
+    .six2eight-project-item .six2eight-project-content{
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .six2eight-project-content {
+        padding: 12px;
+    }
+    .six2eight-project-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .six2eight-project-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Mobile Breakpoint - 480px */
+@media (max-width: 480px) {
+    .six2eight-project-title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 6px;
+    }
+    .six2eight-project-description {
+        font-size: 13px;
+        line-height: 18px;
+        -webkit-line-clamp: 2;
+    }
+}

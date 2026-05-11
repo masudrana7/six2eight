@@ -1,0 +1,446 @@
+/* ========================================
+   SIX2EIGHT PROJECT SINGLE PAGE STYLES
+   ======================================== */
+
+/* Hero Section Styles */
+.six2eight-project-hero {
+	position: relative;
+	min-height: 400px;
+	margin-bottom: 60px;
+	overflow: hidden;
+	background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+.six2eight-project-hero-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.six2eight-hero-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+.six2eight-project-hero-overlay {
+	position: relative;
+	z-index: 2;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.six2eight-project-hero-content {
+	text-align: center;
+	color: white;
+	max-width: 800px;
+	padding: 40px 20px;
+}
+.six2eight-project-title-hero {
+	color: white;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 72px;
+	margin-bottom: 0;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.six2eight-project-categories {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.six2eight-project-category-badge {
+	display: inline-block;
+	background-color: #00B98B;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	font-family: 'Inter', sans-serif;
+}
+.six2eight-project-category-badge:hover {
+	background-color: #009470;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 185, 139, 0.3);
+}
+.six2eight-project-meta {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.9);
+	font-family: 'Inter', sans-serif;
+}
+.six2eight-project-date {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+/* ========================================
+   MAIN CONTENT AREA
+   ======================================== */
+
+.six2eight-project-main {
+	grid-column: 1;
+}
+
+.six2eight-project-content {
+	background: white;
+	padding: 40px;
+	border-radius: 8px;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+.six2eight-project-description {
+	color: #666666;
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+.six2eight-project-description p {
+	margin-bottom: 20px;
+	color: #666666;
+}
+.six2eight-project-description h2,
+.six2eight-project-description h3,
+.six2eight-project-description h4 {
+	color: #2D2D34;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.six2eight-project-description h2 {
+	font-size: 40px;
+	line-height: 48px;
+}
+.six2eight-project-description h3 {
+	font-size: 32px;
+	line-height: 40px;
+}
+.six2eight-project-description h4 {
+	font-size: 24px;
+	line-height: 32px;
+}
+.six2eight-project-description img {
+	max-width: 100%;
+	height: auto;
+	margin: 20px 0;
+	border-radius: 8px;
+}
+.six2eight-project-description ul,
+.six2eight-project-description ol {
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.six2eight-project-description li {
+	margin-bottom: 10px;
+	color: #666666;
+}
+.posts-navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	padding-top: 30px;
+	border-top: 1px solid #e5e5e5;
+}
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+	font-family: 'Inter', sans-serif;
+}
+.post-navigation a {
+	color: #00B98B;
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+.post-navigation a:hover {
+	color: #009470;
+	text-decoration: underline;
+}
+
+/* ========================================
+   SIDEBAR STYLES
+   ======================================== */
+
+.six2eight-project-sidebar {
+	grid-column: 2;
+	grid-row: 1;
+}
+.six2eight-project-details-box {
+	background: white;
+	padding: 30px;
+	border-radius: 8px;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	margin-bottom: 30px;
+}
+.six2eight-project-details-box h3 {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #00B98B;
+}
+.six2eight-project-detail-item {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.six2eight-project-detail-item strong {
+	color: #2D2D34;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 8px;
+}
+.six2eight-detail-value {
+	color: #666666;
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+.six2eight-detail-value a {
+	color: #00B98B;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+.six2eight-detail-value a:hover {
+	color: #009470;
+	text-decoration: underline;
+}
+.six2eight-related-projects-widget {
+	background: white;
+	padding: 30px;
+	border-radius: 8px;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.six2eight-related-projects-widget h3 {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #00B98B;
+}
+.six2eight-related-projects-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.six2eight-related-project-item {
+	display: flex;
+	gap: 15px;
+	padding: 15px;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+}
+.six2eight-related-project-item:hover {
+	background-color: #f9f9f9;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.six2eight-related-project-image {
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+}
+.six2eight-related-project-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.six2eight-related-project-image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.six2eight-related-project-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.six2eight-related-project-title {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 6px 0;
+}
+.six2eight-related-project-title a {
+	color: #2D2D34;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+.six2eight-related-project-title a:hover {
+	color: #00B98B;
+}
+.six2eight-related-project-date {
+	color: #999999;
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet Screens (1024px and below) */
+@media (max-width: 1024px) {
+	.six2eight-project-title-hero {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	.six2eight-project-sidebar {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.six2eight-project-details-box {
+		position: static;
+	}
+
+	.six2eight-project-content {
+		padding: 30px;
+	}
+}
+
+/* Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+	.six2eight-project-hero {
+		min-height: 300px;
+		margin-bottom: 40px;
+	}
+
+	.six2eight-project-hero-overlay {
+		min-height: 300px;
+	}
+
+	.six2eight-project-title-hero {
+		font-size: 36px;
+		line-height: 44px;
+		margin-bottom: 15px;
+	}
+
+	.six2eight-project-categories {
+		gap: 8px;
+	}
+
+	.six2eight-project-category-badge {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+
+	.six2eight-project-content {
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+
+	.six2eight-project-description {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.six2eight-project-description h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.six2eight-project-description h3 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.six2eight-related-project-item {
+		flex-direction: column;
+	}
+
+	.six2eight-related-project-image {
+		width: 100%;
+		height: 150px;
+	}
+
+	.posts-navigation {
+		flex-direction: column;
+		gap: 15px;
+		text-align: center;
+	}
+}
+
+/* Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+	.six2eight-project-hero {
+		min-height: 250px;
+		margin-bottom: 30px;
+	}
+
+	.six2eight-project-hero-overlay {
+		min-height: 250px;
+	}
+
+	.six2eight-project-title-hero {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.six2eight-project-content {
+		padding: 16px;
+	}
+
+	.six2eight-project-details-box,
+	.six2eight-related-projects-widget {
+		padding: 20px;
+	}
+
+	.six2eight-project-details-box h3,
+	.six2eight-related-projects-widget h3 {
+		font-size: 18px;
+	}
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+	.six2eight-project-content,
+	.six2eight-project-details-box,
+	.six2eight-related-projects-widget {
+		background-color: #1a1a1a;
+		border-color: #333333;
+	}
+
+	.six2eight-project-description,
+	.six2eight-detail-value {
+		color: #cccccc;
+	}
+
+	.six2eight-related-project-item:hover {
+		background-color: #242424;
+	}
+
+	.six2eight-project-details-box h3,
+	.six2eight-related-projects-widget h3,
+	.six2eight-project-title-hero,
+	.six2eight-related-project-title {
+		color: #ffffff;
+	}
+}
+
