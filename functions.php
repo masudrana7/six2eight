@@ -299,6 +299,40 @@ if ( ! function_exists( 'six2eight_init_post_types' ) ) {
 add_action( 'init', 'six2eight_init_post_types', 0 );
 
 // ========================================
+// GUTENBERG BLOCKS INITIALIZATION
+// ========================================
+
+if ( ! function_exists( 'six2eight_register_blocks' ) ) {
+	/**
+	 * Register Gutenberg blocks
+	 *
+	 * Registers all custom Gutenberg blocks for the theme.
+	 * Uses block.json for configuration and supports dynamic rendering.
+	 *
+	 * @return void
+	 */
+	function six2eight_register_blocks() {
+		/* Register Six2Eight Project Block */
+		$project_block_path = THEME_DIR . '/inc/blocks/six2eight-project/block.json';
+		if ( file_exists( $project_block_path ) ) {
+			register_block_type(
+				$project_block_path,
+				array(
+					'render_callback' => 'six2eight_render_project_block',
+				)
+			);
+		}
+
+		/* Register Six2Eight Heading Block */
+		$heading_block_path = THEME_DIR . '/inc/blocks/six2eight-heading/block.json';
+		if ( file_exists( $heading_block_path ) ) {
+			register_block_type( $heading_block_path );
+		}
+	}
+}
+add_action( 'init', 'six2eight_register_blocks', 5 );
+
+// ========================================
 // CUSTOM THEME FUNCTIONS
 // ========================================
 

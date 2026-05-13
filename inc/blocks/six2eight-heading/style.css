@@ -1,0 +1,309 @@
+/* ========================================
+   SIX2EIGHT HEADING GUTENBERG BLOCK STYLES
+======================================== */
+
+/* Primary heading block styles */
+.wp-block-six2eight-heading {
+	/* Font Family */
+	font-family: 'Inter', sans-serif;
+
+	/* Default color - Primary Dark */
+	color: #2D2D34;
+
+	/* Reset default margins */
+	margin: 0;
+	padding: 0;
+
+	/* Better text rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+
+	/* Word breaking for long text */
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* H1 Heading Styles */
+.wp-block-six2eight-heading h1 {
+	/* H1 Typography */
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 72px;
+
+	/* Spacing */
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H2 Heading Styles */
+.wp-block-six2eight-heading h2 {
+	/* H2 Typography */
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 72px;
+
+	/* Spacing */
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H3 Heading Styles */
+.wp-block-six2eight-heading h3 {
+	/* H3 Typography */
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 48px;
+
+	/* Spacing */
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H4 Heading Styles */
+.wp-block-six2eight-heading h4 {
+	/* H4 Typography */
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 40px;
+
+	/* Spacing */
+	margin-top: 14px;
+	margin-bottom: 14px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H5 Heading Styles */
+.wp-block-six2eight-heading h5 {
+	/* H5 Typography */
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+
+	/* Spacing */
+	margin-top: 12px;
+	margin-bottom: 12px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter spacing: 0px;
+}
+
+/* H6 Heading Styles */
+.wp-block-six2eight-heading h6 {
+	/* H6 Typography */
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+
+	/* Spacing */
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* Alignment Styles */
+
+/* Left aligned text */
+.wp-block-six2eight-heading.alignleft {
+	text-align: left;
+}
+
+/* Center aligned text */
+.wp-block-six2eight-heading.aligncenter {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Right aligned text */
+.wp-block-six2eight-heading.alignright {
+	text-align: right;
+}
+
+/* Responsive typography - Tablet (768px and below) */
+@media ( max-width: 768px ) {
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+
+/* Responsive typography - Mobile (1024px and below - as specified) */
+@media ( max-width: 1024px ) {
+	.wp-block-six2eight-heading {
+		/* Improved readability on smaller screens */
+		word-spacing: normal;
+	}
+
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 40px;
+		line-height: 48px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 28px;
+		line-height: 36px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 24px;
+		line-height: 32px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 6px;
+		margin-bottom: 6px;
+	}
+}
+
+/* Mobile Extra Small (480px and below) */
+@media ( max-width: 480px ) {
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* State Styles */
+
+/* Focus state for editor */
+.wp-block-six2eight-heading:focus {
+	outline: 2px solid #00B98B;
+	outline-offset: 2px;
+}
+
+/* Dark mode support (if supported by WordPress theme) */
+@media ( prefers-color-scheme: dark ) {
+	.wp-block-six2eight-heading {
+		color: #FFFFFF;
+	}
+
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2,
+	.wp-block-six2eight-heading h3,
+	.wp-block-six2eight-heading h4,
+	.wp-block-six2eight-heading h5,
+	.wp-block-six2eight-heading h6 {
+		color: #FFFFFF;
+	}
+}
+
+/* Print styles */
+@media print {
+	.wp-block-six2eight-heading {
+		page-break-inside: avoid;
+		color: #000;
+	}
+}
+
+/* Utility classes for special cases */
+
+/* Primary color accent */
+.wp-block-six2eight-heading.is-primary {
+	color: #00B98B;
+}
+
+/* Heading with background */
+.wp-block-six2eight-heading.has-background {
+	padding: 20px;
+	border-radius: 4px;
+}
+
+/* Heading with highlight effect */
+.wp-block-six2eight-heading.highlight {
+	background: linear-gradient( 120deg, transparent 0%, rgba( 0, 185, 139, 0.1 ) 100% );
+	padding: 10px 15px;
+	border-left: 4px solid #00B98B;
+	border-radius: 0 4px 4px 0;
+}
+

@@ -1,0 +1,24 @@
+# NPM
+node_modules/
+package-lock.json
+
+# Build outputs
+inc/blocks/*/build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# WordPress
+wp-config-local.php
+.env
+.env.local
+

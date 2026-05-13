@@ -1,0 +1,28 @@
+{
+  "name": "six2eight",
+  "version": "1.0.0",
+  "description": "A basic, responsive WordPress theme built from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "build:heading": "wp-scripts build inc/blocks/six2eight-heading/index.js --output-path=inc/blocks/six2eight-heading/build",
+    "start:heading": "wp-scripts start inc/blocks/six2eight-heading/index.js --output-path=inc/blocks/six2eight-heading/build",
+    "build:project": "wp-scripts build inc/blocks/six2eight-project/index.js --output-path=inc/blocks/six2eight-project/build",
+    "start:project": "wp-scripts start inc/blocks/six2eight-project/index.js --output-path=inc/blocks/six2eight-project/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masudrana7/six2eight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masudrana7/six2eight/issues"
+  },
+  "homepage": "https://github.com/masudrana7/six2eight#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^32.1.0"
+  }
+}

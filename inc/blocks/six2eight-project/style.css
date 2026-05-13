@@ -3,33 +3,23 @@
    ======================================== */
 
 .wp-block-six2eight-project {
-	/* Block wrapper */
 	width: 100%;
 }
-
-/* Width Classes */
 .wp-block-six2eight-project.is-width-full {
 	max-width: 100%;
 }
-
 .wp-block-six2eight-project.is-width-wide {
 	max-width: 100%;
 }
-
 .wp-block-six2eight-project.is-width-normal {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-/* Grid Wrapper */
 .six2eight-projects-wrapper {
 	width: 100%;
 }
-
-/* Projects Grid */
 .six2eight-projects-grid {
-	/* CSS Grid layout with CSS custom property for columns */
 	display: grid;
 	grid-template-columns: repeat(var(--columns, 3), 1fr);
 	gap: 30px;
@@ -37,10 +27,7 @@
 	padding: 0;
 	list-style: none;
 }
-
-/* Project Item */
 .six2eight-project-item {
-	/* Individual project card */
 	background: white;
 	border-radius: 8px;
 	border: 1px solid #e5e5e5;
@@ -53,7 +40,6 @@
 }
 
 .six2eight-project-item:hover {
-	/* Hover effect */
 	box-shadow: 0 8px 24px rgba(0, 185, 139, 0.15);
 	border-color: #00B98B;
 	transform: translateY(-4px);
@@ -61,7 +47,6 @@
 
 /* Project Content */
 .six2eight-project-content {
-	/* Content wrapper */
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -70,7 +55,6 @@
 
 /* Normal Content (Icon + Title) */
 .six2eight-normal-content {
-	/* Normal view content */
 	padding: 25px;
 	text-align: center;
 	border-bottom: 1px solid #e5e5e5;
@@ -81,7 +65,6 @@
 }
 
 .six2eight-icon {
-	/* Icon container */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -92,13 +75,10 @@
 }
 
 .six2eight-icon svg {
-	/* Icon SVG */
 	width: 100%;
 	height: 100%;
 }
-
 .six2eight-project-title-visible {
-	/* Title in normal view */
 	font-family: 'Inter Tight', sans-serif;
 	color: #2D2D34;
 	font-weight: 700;
@@ -106,10 +86,7 @@
 	line-height: 26px;
 	margin: 0;
 }
-
-/* Active Content (Hidden initially) */
 .project-active-content {
-	/* Active view content */
 	padding: 25px;
 	flex: 1;
 	display: flex;
@@ -120,22 +97,15 @@
 	transition: all 0.3s ease;
 	background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(45, 45, 52, 0.02) 100%);
 }
-
 .six2eight-project-item:hover .project-active-content {
-	/* Show on hover */
 	opacity: 1;
 	visibility: visible;
 }
-
 .six2eight-project-item:hover .six2eight-normal-content {
-	/* Hide normal content on hover */
 	opacity: 0;
 	visibility: hidden;
 }
-
-/* Project Title */
 .six2eight-project-title {
-	/* Title in active view */
 	font-family: 'Inter Tight', sans-serif;
 	color: #2D2D34;
 	font-weight: 700;
@@ -143,22 +113,15 @@
 	line-height: 28px;
 	margin: 0 0 8px 0;
 }
-
 .six2eight-project-title a {
-	/* Title link */
 	color: #2D2D34;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
-
 .six2eight-project-title a:hover {
-	/* Link hover */
 	color: #00B98B;
 }
-
-/* Project Description */
 .six2eight-project-description {
-	/* Description text */
 	font-family: 'Inter', sans-serif;
 	color: #666666;
 	font-size: 15px;
@@ -166,19 +129,14 @@
 	margin: 0;
 	flex: 1;
 }
-
-/* Project Image */
 .six2eight-project-image {
-	/* Image container */
 	width: 100%;
 	height: auto;
 	border-radius: 6px;
 	overflow: hidden;
 	background-color: #f5f5f5;
 }
-
 .six2eight-project-image img {
-	/* Image styling */
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
@@ -186,15 +144,11 @@
 	display: block;
 	transition: transform 0.3s ease;
 }
-
 .six2eight-project-item:hover .six2eight-project-image img {
-	/* Image zoom on hover */
 	transform: scale(1.05);
 }
 
-/* No Projects Message */
 .six2eight-no-projects {
-	/* Empty state message */
 	text-align: center;
 	padding: 40px 20px;
 	color: #666666;
@@ -213,30 +167,24 @@
 		gap: 25px;
 		grid-template-columns: repeat(var(--columns, 2), 1fr);
 	}
-
 	.six2eight-normal-content {
 		padding: 20px;
 	}
-
 	.project-active-content {
 		padding: 20px;
 	}
-
 	.six2eight-project-title-visible {
 		font-size: 16px;
 		line-height: 24px;
 	}
-
 	.six2eight-project-title {
 		font-size: 18px;
 		line-height: 26px;
 	}
-
 	.six2eight-project-description {
 		font-size: 14px;
 		line-height: 22px;
 	}
-
 	.six2eight-project-image img {
 		height: 180px;
 	}
@@ -248,34 +196,27 @@
 		gap: 20px;
 		grid-template-columns: 1fr;
 	}
-
 	.six2eight-normal-content {
 		padding: 16px;
 	}
-
 	.project-active-content {
 		padding: 16px;
 	}
-
 	.six2eight-project-title-visible {
 		font-size: 14px;
 		line-height: 20px;
 	}
-
 	.six2eight-project-title {
 		font-size: 16px;
 		line-height: 24px;
 	}
-
 	.six2eight-project-description {
 		font-size: 13px;
 		line-height: 20px;
 	}
-
 	.six2eight-project-image img {
 		height: 200px;
 	}
-
 	.six2eight-project-item {
 		border-radius: 4px;
 	}
@@ -287,26 +228,21 @@
 		background-color: #1a1a1a;
 		border-color: #333333;
 	}
-
 	.six2eight-normal-content,
 	.project-active-content {
 		border-color: #333333;
 	}
-
 	.six2eight-project-title-visible,
 	.six2eight-project-title,
 	.six2eight-project-title a {
 		color: #ffffff;
 	}
-
 	.six2eight-project-description {
 		color: #cccccc;
 	}
-
 	.six2eight-icon {
 		background-color: #333333;
 	}
-
 	.project-active-content {
 		background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(200, 200, 200, 0.02) 100%);
 	}
@@ -317,12 +253,10 @@
 	.six2eight-projects-grid {
 		gap: 20px;
 	}
-
 	.six2eight-project-item:hover .project-active-content {
 		opacity: 1;
 		visibility: visible;
 	}
-
 	.six2eight-project-item:hover .six2eight-normal-content {
 		opacity: 0;
 		visibility: hidden;

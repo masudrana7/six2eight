@@ -27,63 +27,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Register Six2Eight Project Block
- *
- * Registers the Gutenberg block with all attributes and settings.
- *
- * @since 1.0.0
- * @return void
- */
-function six2eight_register_project_block() {
-
-	// Register block script
-	wp_register_script(
-		'six2eight-project-block',
-		get_template_directory_uri() . '/inc/blocks/six2eight-project/block.js',
-		[
-			'wp-blocks',
-			'wp-element',
-			'wp-editor',
-			'wp-components',
-			'wp-i18n',
-		],
-		filemtime( get_template_directory() . '/inc/blocks/six2eight-project/block.js' )
-	);
-
-	// Register block styles
-	wp_register_style(
-		'six2eight-project-block',
-		get_template_directory_uri() . '/inc/blocks/six2eight-project/style.css',
-		[],
-		filemtime( get_template_directory() . '/inc/blocks/six2eight-project/style.css' )
-	);
-
-	// Register block editor styles
-	wp_register_style(
-		'six2eight-project-block-editor',
-		get_template_directory_uri() . '/inc/blocks/six2eight-project/editor.css',
-		[ 'wp-edit-blocks' ],
-		filemtime( get_template_directory() . '/inc/blocks/six2eight-project/editor.css' )
-	);
-
-	// Register the block
-	register_block_type(
-		get_template_directory() . '/inc/blocks/six2eight-project',
-		[
-			'editor_script'   => 'six2eight-project-block',
-			'script'          => 'six2eight-project-block',
-			'style'           => 'six2eight-project-block',
-			'editor_style'    => 'six2eight-project-block-editor',
-			'render_callback' => 'six2eight_render_project_block',
-		]
-	);
-}
-add_action( 'init', 'six2eight_register_project_block' );
-
-/**
  * Render Six2Eight Project Block
  *
  * Renders the block output on the frontend.
+ * Called by register_block_type() with render_callback.
  *
  * @since 1.0.0
  * @param array $attributes Block attributes.

@@ -9,7 +9,7 @@
 
 const { registerBlockType } = wp.blocks;
 const { InspectorControls, BlockControls, AlignmentToolbar } = wp.blockEditor;
-const { PanelBody, RangeControl, SelectControl, ToolbarGroup, ToolbarButton } = wp.components;
+const { PanelBody, RangeControl, SelectControl } = wp.components;
 const { __ } = wp.i18n;
 
 registerBlockType( 'six2eight/project', {
@@ -223,7 +223,7 @@ registerBlockType( 'six2eight/project', {
 					} }
 				>
 					<p style={ { margin: 0, color: '#666' } }>
-						📊 { __( 'Six2Eight Project Block', 'six2eight' ) }
+						 { __( 'Six2Eight Project Block', 'six2eight' ) }
 					</p>
 					<p style={ { margin: '10px 0 0 0', fontSize: '12px', color: '#999' } }>
 						{ __( 'Showing', 'six2eight' ) } { postsPerPage }{ ' ' }

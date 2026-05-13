@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "six2eight/project",
 	"title": "Six2Eight Project",
 	"category": "common",
@@ -13,10 +13,6 @@
 		"gallery"
 	],
 	"textdomain": "six2eight",
-	"editorScript": "six2eight-project-block",
-	"script": "six2eight-project-block",
-	"style": "six2eight-project-block",
-	"editorStyle": "six2eight-project-block-editor",
 	"supports": {
 		"html": false,
 		"align": [
@@ -55,7 +51,15 @@
 		"width": {
 			"type": "string",
 			"default": "wide"
+		},
+		"align": {
+			"type": "string",
+			"default": "none"
 		}
-	}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./index.php"
 }
 
