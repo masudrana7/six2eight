@@ -184,11 +184,14 @@ if ( ! function_exists( 'six2eight_scripts' ) ) {
 		/*
 		 * Enqueue the navigation and menu interaction script.
 		 * This handles canvas menu toggle, dropdown menus, and accessibility features.
+		 *
+		 * Dependencies: jQuery must be loaded before this script
+		 * In footer: true (loads in footer for better performance)
 		 */
 		wp_enqueue_script(
 			'six2eight-custom',
 			THEME_URI . '/assets/js/custom.js',
-			array(),
+			array( 'jquery' ),
 			THEME_VERSION,
 			true
 		);
@@ -312,21 +315,22 @@ if ( ! function_exists( 'six2eight_register_blocks' ) ) {
 	 * @return void
 	 */
 	function six2eight_register_blocks() {
-		/* Register Six2Eight Project Block */
+		/* Register Six2Eight Project Block — render handled by block.json's "render": "file:./index.php" */
 		$project_block_path = THEME_DIR . '/inc/blocks/six2eight-project/block.json';
 		if ( file_exists( $project_block_path ) ) {
-			register_block_type(
-				$project_block_path,
-				array(
-					'render_callback' => 'six2eight_render_project_block',
-				)
-			);
+			register_block_type( $project_block_path );
 		}
 
-		/* Register Six2Eight Heading Block */
+		/* Register Six2Eight Heading Block — render handled by block.json's "render": "file:./index.php" */
 		$heading_block_path = THEME_DIR . '/inc/blocks/six2eight-heading/block.json';
 		if ( file_exists( $heading_block_path ) ) {
 			register_block_type( $heading_block_path );
+		}
+
+		/* Register Six2Eight Grid Section Block — professional grid with repeater content */
+		$grid_section_block_path = THEME_DIR . '/inc/blocks/six2eight-grid-section/block.json';
+		if ( file_exists( $grid_section_block_path ) ) {
+			register_block_type( $grid_section_block_path );
 		}
 	}
 }

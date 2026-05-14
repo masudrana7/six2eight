@@ -1,0 +1,503 @@
+ver/* ========================================
+   SIX2EIGHT PROJECT ARCHIVE PAGE STYLES
+   ======================================== */
+
+/* Archive Header */
+.six2eight-archive-header {
+	/* Archive header section */
+	background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+	padding: 60px 20px;
+	margin-bottom: 60px;
+	border-bottom: 2px solid #00B98B;
+}
+
+.six2eight-archive-header-content {
+	/* Header content alignment */
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.six2eight-archive-title {
+	/* Archive title styling */
+	font-family: 'Inter Tight', sans-serif;
+	color: #2D2D34;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 72px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.six2eight-archive-description {
+	/* Archive description text */
+	font-family: 'Inter', sans-serif;
+	color: #666666;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0;
+}
+
+/* Projects Archive Container */
+.six2eight-projects-archive {
+	/* Main archive container */
+	padding-bottom: 60px;
+}
+
+/* Grid Layout */
+.six2eight-projects-grid-archive {
+	/* Projects grid container */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 30px;
+	margin-bottom: 60px;
+}
+
+/* Project Archive Item */
+.six2eight-project-archive-item {
+	/* Individual project item */
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid #e5e5e5;
+	transition: all 0.3s ease;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.six2eight-project-archive-item:hover {
+	/* Item hover state */
+	box-shadow: 0 8px 24px rgba(0, 185, 139, 0.15);
+	border-color: #00B98B;
+	transform: translateY(-4px);
+}
+
+.six2eight-project-archive-inner {
+	/* Inner wrapper */
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Project Image */
+.six2eight-project-archive-image {
+	/* Image container */
+	position: relative;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	flex-shrink: 0;
+}
+
+.six2eight-project-archive-image-link {
+	/* Image link */
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.six2eight-project-archive-image img {
+	/* Image styling */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+	display: block;
+}
+
+.six2eight-project-archive-image-link:hover img {
+	/* Image hover zoom */
+	transform: scale(1.1);
+}
+
+.six2eight-project-archive-overlay {
+	/* Image overlay on hover */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 185, 139, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.six2eight-project-archive-image-link:hover .six2eight-project-archive-overlay {
+	/* Show overlay on hover */
+	opacity: 1;
+}
+
+.six2eight-project-view-btn {
+	/* View button text */
+	color: white;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Project Content */
+.six2eight-project-archive-content {
+	/* Content area */
+	padding: 25px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.six2eight-project-archive-title {
+	/* Project title */
+	font-family: 'Inter Tight', sans-serif;
+	color: #2D2D34;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	margin: 0 0 12px 0;
+	transition: color 0.3s ease;
+}
+
+.six2eight-project-archive-title a {
+	/* Title link */
+	color: #2D2D34;
+	text-decoration: none;
+}
+
+.six2eight-project-archive-title a:hover {
+	/* Title hover */
+	color: #00B98B;
+}
+
+/* Excerpt */
+.six2eight-project-archive-excerpt {
+	/* Project excerpt text */
+	font-family: 'Inter', sans-serif;
+	color: #666666;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 15px;
+	flex: 1;
+}
+
+/* Meta Information */
+.six2eight-project-archive-meta {
+	/* Meta information container */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #e5e5e5;
+	flex-wrap: wrap;
+}
+
+/* Categories in Archive */
+.six2eight-project-archive-categories {
+	/* Categories container */
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.six2eight-project-archive-category {
+	/* Individual category tag */
+	display: inline-block;
+	background-color: #f0f0f0;
+	color: #666666;
+	padding: 4px 12px;
+	border-radius: 12px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	font-family: 'Inter', sans-serif;
+}
+
+.six2eight-project-archive-category:hover {
+	/* Category hover state */
+	background-color: #00B98B;
+	color: white;
+}
+
+/* Date in Archive */
+.six2eight-project-archive-date {
+	/* Date styling */
+	color: #999999;
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+/* Read More Link */
+.six2eight-project-archive-link {
+	/* Read more link */
+	color: #00B98B;
+	text-decoration: none;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.six2eight-project-archive-link:hover {
+	/* Link hover state */
+	color: #009470;
+	text-decoration: underline;
+}
+
+/* Pagination */
+.six2eight-archive-pagination {
+	/* Pagination container */
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.page-numbers {
+	/* Pagination links */
+	display: inline-block;
+	color: #666666;
+	text-decoration: none;
+	padding: 10px 12px;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.page-numbers:hover,
+.page-numbers.current {
+	/* Current/hover pagination */
+	background-color: #00B98B;
+	color: white;
+	border-color: #00B98B;
+}
+
+/* No Projects Message */
+.six2eight-no-projects {
+	/* Empty state container */
+	text-align: center;
+	padding: 80px 20px;
+	background: white;
+	border-radius: 8px;
+	border: 1px solid #e5e5e5;
+}
+
+.six2eight-no-projects-icon {
+	/* Empty state icon */
+	margin-bottom: 30px;
+	opacity: 0.5;
+}
+
+.six2eight-no-projects-title {
+	/* Empty state title */
+	font-family: 'Inter Tight', sans-serif;
+	color: #2D2D34;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	margin: 0 0 15px 0;
+}
+
+.six2eight-no-projects-text {
+	/* Empty state text */
+	font-family: 'Inter', sans-serif;
+	color: #666666;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0 0 30px 0;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Button Styling */
+.six2eight-button-primary {
+	/* Primary button */
+	display: inline-block;
+	background-color: #00B98B;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.six2eight-button-primary:hover {
+	/* Button hover state */
+	background-color: #009470;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 185, 139, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet Screens (1024px and below) */
+@media (max-width: 1024px) {
+	.six2eight-archive-title {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	.six2eight-projects-grid-archive {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 25px;
+	}
+}
+
+/* Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+	.six2eight-archive-header {
+		padding: 40px 20px;
+		margin-bottom: 40px;
+	}
+
+	.six2eight-archive-title {
+		font-size: 36px;
+		line-height: 44px;
+		margin-bottom: 12px;
+	}
+
+	.six2eight-archive-description {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.six2eight-projects-grid-archive {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 20px;
+		margin-bottom: 40px;
+	}
+
+	.six2eight-project-archive-image {
+		height: 200px;
+	}
+
+	.six2eight-project-archive-content {
+		padding: 20px;
+	}
+
+	.six2eight-project-archive-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.six2eight-project-archive-excerpt {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.six2eight-project-archive-meta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.six2eight-archive-pagination {
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+}
+
+/* Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+	.six2eight-archive-header {
+		padding: 30px 15px;
+		margin-bottom: 30px;
+	}
+
+	.six2eight-archive-title {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.six2eight-projects-grid-archive {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.six2eight-project-archive-image {
+		height: 250px;
+	}
+
+	.six2eight-project-archive-content {
+		padding: 16px;
+	}
+
+	.six2eight-no-projects {
+		padding: 40px 15px;
+	}
+
+	.six2eight-no-projects-title {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.page-numbers {
+		padding: 8px 10px;
+		font-size: 14px;
+	}
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+	.six2eight-archive-header {
+		background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
+	}
+
+	.six2eight-project-archive-item,
+	.six2eight-no-projects {
+		background-color: #1a1a1a;
+		border-color: #333333;
+	}
+
+	.six2eight-archive-title,
+	.six2eight-project-archive-title,
+	.six2eight-no-projects-title {
+		color: #ffffff;
+	}
+
+	.six2eight-archive-description,
+	.six2eight-project-archive-excerpt,
+	.six2eight-no-projects-text {
+		color: #cccccc;
+	}
+
+	.six2eight-project-archive-category {
+		background-color: #333333;
+		color: #cccccc;
+	}
+
+	.page-numbers {
+		color: #cccccc;
+		border-color: #333333;
+	}
+
+	.page-numbers:hover,
+	.page-numbers.current {
+		background-color: #00B98B;
+		color: white;
+		border-color: #00B98B;
+	}
+}
+

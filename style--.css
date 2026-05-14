@@ -749,16 +749,6 @@ a:hover {
   min-height: 150px;
 }
 
-.entry-header{
-    background: #ddd;
-    padding: 100px 0;
-}
-.entry-content{
-    padding: 100px 0;
-}
-.margin-bottom-45{
-    margin-bottom: 45px;
-}
 /* ─── THE CORE FIX ─────────────────────────────────────────── */
 
 .six2eight-project-item .six2eight-normal-content {

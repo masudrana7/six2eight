@@ -1,0 +1,151 @@
+/**
+ * Six2Eight Grid Section Block - Editor Styles
+ *
+ * Styles for the Gutenberg editor preview only
+ *
+ * @package Six2Eight
+ * @since 1.0.0
+ */
+
+/* ===================================================
+   EDITOR STYLES - Grid Section Block
+   =================================================== */
+
+/* Main editor container */
+.six2eight-grid-section-editor {
+	/* Editor container styling */
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #f9f9f9;
+}
+
+/* Grid section header */
+.six2eight-grid-section-editor .six2eight-grid-section-header {
+	/* Header section styling */
+	padding: 24px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+
+/* Section title in editor */
+.six2eight-grid-section-editor .six2eight-grid-section-title {
+	/* Title styling */
+	font-size: 32px;
+	font-weight: 700;
+	color: #2D2D34;
+	margin: 0;
+	padding: 0;
+}
+
+/* Grid preview */
+.six2eight-grid-section-editor .six2eight-grid-section-grid {
+	/* Grid container styling */
+	background-color: #f9f9f9;
+}
+
+/* Individual grid box in editor */
+.six2eight-grid-section-editor .six2eight-grid-box {
+	/* Box styling */
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+}
+
+/* Box hover state */
+.six2eight-grid-section-editor .six2eight-grid-box:hover {
+	/* Hover styling */
+	box-shadow: 0 4px 16px rgba(0, 185, 139, 0.15);
+	transform: translateY(-2px);
+}
+
+/* Box selected state */
+.six2eight-grid-section-editor .six2eight-grid-box.selected {
+	/* Selected box styling */
+	border: 2px solid #00B98B;
+	box-shadow: 0 4px 16px rgba(0, 185, 139, 0.25);
+}
+
+/* Box price styling */
+.six2eight-grid-section-editor .box-price {
+	/* Price styling */
+	font-size: 28px;
+	font-weight: 700;
+	color: #00B98B;
+	margin-bottom: 8px;
+}
+
+/* Box year styling */
+.six2eight-grid-section-editor .box-year {
+	/* Year styling */
+	font-size: 14px;
+	color: #999;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+
+/* Short description */
+.six2eight-grid-section-editor .box-short-description {
+	/* Short description styling */
+	font-size: 16px;
+	font-weight: 600;
+	color: #2D2D34;
+	margin-bottom: 8px;
+}
+
+/* Full description */
+.six2eight-grid-section-editor .box-description {
+	/* Description styling */
+	font-size: 14px;
+	color: #666;
+	line-height: 1.6;
+}
+
+/* ===================================================
+   RESPONSIVE EDITOR STYLES
+   =================================================== */
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+	/* Adjust grid for tablets */
+	.six2eight-grid-section-editor .six2eight-grid-section-grid {
+		/* Tablet grid columns */
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+
+	/* Title sizing on tablet */
+	.six2eight-grid-section-editor .six2eight-grid-section-title {
+		/* Tablet title size */
+		font-size: 24px;
+	}
+
+	/* Header padding on tablet */
+	.six2eight-grid-section-editor .six2eight-grid-section-header {
+		/* Tablet header padding */
+		padding: 16px;
+	}
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+	/* Single column on mobile */
+	.six2eight-grid-section-editor .six2eight-grid-section-grid {
+		/* Mobile grid columns */
+		grid-template-columns: 1fr !important;
+	}
+
+	/* Title sizing on mobile */
+	.six2eight-grid-section-editor .six2eight-grid-section-title {
+		/* Mobile title size */
+		font-size: 20px;
+	}
+
+	/* Box padding on mobile */
+	.six2eight-grid-section-editor .six2eight-grid-box {
+		/* Mobile box padding */
+		padding: 16px;
+	}
+}
+

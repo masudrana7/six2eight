@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "six2eight/grid-section",
+	"title": "Six2Eight Grid Section",
+	"category": "common",
+	"icon": "grid-view",
+	"description": "A professional grid section block with repeater content boxes, pricing, and call-to-action buttons.",
+	"keywords": [
+		"grid",
+		"section",
+		"pricing",
+		"boxes",
+		"repeater",
+		"six2eight"
+	],
+	"textdomain": "six2eight",
+	"supports": {
+		"html": false,
+		"align": [
+			"full",
+			"wide",
+			"center",
+			"left",
+			"right"
+		],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"color": {
+			"background": true,
+			"text": true
+		}
+	},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Grid Section Title"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "View More"
+		},
+		"buttonLink": {
+			"type": "string",
+			"default": ""
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"boxContent": {
+			"type": "array",
+			"default": [
+				{
+					"id": 1,
+					"price": "$99",
+					"year": "2024",
+					"shortDescription": "Short description",
+					"description": "Full detailed description goes here"
+				}
+			]
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#2D2D34"
+		}
+	}
+}
+

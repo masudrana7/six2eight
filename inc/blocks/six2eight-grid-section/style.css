@@ -1,0 +1,350 @@
+/**
+ * Six2Eight Grid Section Block - Frontend Styles
+ *
+ * Professional styling for the Grid Section block on frontend
+ *
+ * @package Six2Eight
+ * @since 1.0.0
+ */
+
+/* ===================================================
+   GRID SECTION BLOCK - FRONTEND STYLES
+   =================================================== */
+
+/* Grid section main container */
+.six2eight-grid-section {
+	/* Main container styling */
+	width: 100%;
+	padding: 60px 40px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+/* Grid section header with title */
+.six2eight-grid-section-header {
+	/* Header styling */
+	width: 100%;
+	margin-bottom: 40px;
+	padding: 0;
+	text-align: left;
+}
+
+/* Grid section title typography */
+.six2eight-grid-section-title {
+	/* Title styling */
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 72px;
+	color: #2D2D34;
+	margin: 0;
+	padding: 0;
+	word-break: break-word;
+}
+
+/* Grid container */
+.six2eight-grid-section-grid {
+	/* Grid layout */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+/* Individual grid box item */
+.six2eight-grid-box {
+	/* Box styling */
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 12px;
+	padding: 32px 24px;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Box hover state */
+.six2eight-grid-box:hover {
+	/* Hover effects */
+	border-color: #00B98B;
+	box-shadow: 0 12px 32px rgba(0, 185, 139, 0.12);
+	transform: translateY(-4px);
+}
+
+/* Box price - main element */
+.six2eight-box-price {
+	/* Price styling */
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	color: #00B98B;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Box year - secondary info */
+.six2eight-box-year {
+	/* Year styling */
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #9C9CA7;
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Box short description - headline */
+.six2eight-box-short-description {
+	/* Short description styling */
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	color: #2D2D34;
+	line-height: 28px;
+	margin: 8px 0 0 0;
+	padding: 0;
+}
+
+/* Box description - body text */
+.six2eight-box-description {
+	/* Description styling */
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #6B6B7B;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+/* CTA Button wrapper */
+.six2eight-grid-section-button-wrapper {
+	/* Button container styling */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 24px;
+	padding: 0;
+}
+
+/* CTA Button styling */
+.six2eight-grid-section-button {
+	/* Button styling */
+	display: inline-block;
+	background-color: #00B98B;
+	color: #fff;
+	font-family: 'Inter Tight', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	text-decoration: none;
+	padding: 12px 32px;
+	border: 2px solid #00B98B;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	text-align: center;
+}
+
+/* Button hover state */
+.six2eight-grid-section-button:hover {
+	/* Hover effects */
+	background-color: #008B6F;
+	border-color: #008B6F;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(0, 185, 139, 0.2);
+}
+
+/* Button focus state for accessibility */
+.six2eight-grid-section-button:focus {
+	/* Focus effects */
+	outline: 2px solid #00B98B;
+	outline-offset: 2px;
+}
+
+/* Button active state */
+.six2eight-grid-section-button:active {
+	/* Active effects */
+	transform: translateY(0);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN - TABLETS (768px and below)
+   =================================================== */
+
+@media (max-width: 768px) {
+	/* Main container - tablet */
+	.six2eight-grid-section {
+		/* Tablet container padding */
+		padding: 40px 24px;
+	}
+
+	/* Header - tablet */
+	.six2eight-grid-section-header {
+		/* Tablet header margin */
+		margin-bottom: 32px;
+	}
+
+	/* Title - tablet */
+	.six2eight-grid-section-title {
+		/* Tablet title size */
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+	/* Grid - tablet (2 columns) */
+	.six2eight-grid-section-grid {
+		/* Tablet grid columns */
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		margin-bottom: 32px;
+	}
+
+	/* Box - tablet */
+	.six2eight-grid-box {
+		/* Tablet box padding */
+		padding: 24px 20px;
+	}
+
+	/* Price - tablet */
+	.six2eight-box-price {
+		/* Tablet price size */
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	/* Short description - tablet */
+	.six2eight-box-short-description {
+		/* Tablet description size */
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	/* Description - tablet */
+	.six2eight-box-description {
+		/* Tablet body size */
+		font-size: 13px;
+		line-height: 20px;
+	}
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN - MOBILE (480px and below)
+   =================================================== */
+
+@media (max-width: 480px) {
+	/* Main container - mobile */
+	.six2eight-grid-section {
+		/* Mobile container padding */
+		padding: 24px 16px;
+	}
+
+	/* Header - mobile */
+	.six2eight-grid-section-header {
+		/* Mobile header margin */
+		margin-bottom: 24px;
+	}
+
+	/* Title - mobile */
+	.six2eight-grid-section-title {
+		/* Mobile title size */
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	/* Grid - mobile (1 column) */
+	.six2eight-grid-section-grid {
+		/* Mobile grid columns */
+		grid-template-columns: 1fr;
+		gap: 16px;
+		margin-bottom: 24px;
+	}
+
+	/* Box - mobile */
+	.six2eight-grid-box {
+		/* Mobile box padding */
+		padding: 20px 16px;
+		gap: 10px;
+	}
+
+	/* Price - mobile */
+	.six2eight-box-price {
+		/* Mobile price size */
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	/* Year - mobile */
+	.six2eight-box-year {
+		/* Mobile year size */
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* Short description - mobile */
+	.six2eight-box-short-description {
+		/* Mobile short description size */
+		font-size: 14px;
+		line-height: 20px;
+		margin-top: 6px;
+	}
+
+	/* Description - mobile */
+	.six2eight-box-description {
+		/* Mobile description size */
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	/* Button - mobile */
+	.six2eight-grid-section-button {
+		/* Mobile button styling */
+		width: 100%;
+		padding: 12px 24px;
+		font-size: 14px;
+	}
+}
+
+/* ===================================================
+   ALIGNMENT & SPACING VARIATIONS
+   =================================================== */
+
+/* Full width alignment */
+.six2eight-grid-section.alignfull {
+	/* Full width margin/padding reset */
+	margin-left: calc( -50vw + 50% );
+	margin-right: calc( -50vw + 50% );
+	width: 100vw;
+}
+
+/* Wide alignment */
+.six2eight-grid-section.alignwide {
+	/* Wide alignment styling */
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Center alignment */
+.six2eight-grid-section.aligncenter {
+	/* Center text alignment */
+	text-align: center;
+}
+
+/* Center alignment - grid */
+.six2eight-grid-section.aligncenter .six2eight-grid-section-grid {
+	/* Centered grid layout */
+	justify-items: center;
+}
+

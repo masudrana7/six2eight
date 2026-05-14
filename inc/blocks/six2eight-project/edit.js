@@ -7,9 +7,9 @@
  * @since 1.0.0
  */
 
-const { InspectorControls, BlockControls, AlignmentToolbar } = wp.blockEditor;
-const { PanelBody, RangeControl, SelectControl } = wp.components;
-const { __ } = wp.i18n;
+import { InspectorControls, BlockControls, AlignmentToolbar, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, RangeControl, SelectControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 /**
  * Edit function - Block editor UI
@@ -27,6 +27,10 @@ const edit = ( { attributes, setAttributes } ) => {
 		width,
 		align,
 	} = attributes;
+
+	const blockProps = useBlockProps( {
+		className: `align${ align } is-width-${ width }`,
+	} );
 
 	return (
 		<>
@@ -188,8 +192,9 @@ const edit = ( { attributes, setAttributes } ) => {
 
 			{/* Block Preview in Editor */}
 			<div
-				className={ `wp-block-six2eight-project align${ align } is-width-${ width }` }
+				{ ...blockProps }
 				style={ {
+					...blockProps.style,
 					padding: '20px',
 					border: '2px dashed #ccc',
 					borderRadius: '4px',

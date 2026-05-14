@@ -7,9 +7,9 @@
  * @since 1.0.0
  */
 
-const { InspectorControls, BlockControls, AlignmentToolbar } = wp.blockEditor;
-const { PanelBody, RangeControl, SelectControl, TextControl } = wp.components;
-const { __ } = wp.i18n;
+import { InspectorControls, BlockControls, AlignmentToolbar, RichText, useBlockProps } from '@wordpress/block-editor';
+import { PanelBody, RangeControl, SelectControl, TextControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 /**
  * Edit function - Block editor UI
@@ -34,6 +34,14 @@ const edit = ( { attributes, setAttributes } ) => {
 
 	/* Heading tag based on level */
 	const headingTag = `h${ level }`;
+
+	const blockProps = useBlockProps( {
+		style: {
+			marginTop: `${ marginTop }px`,
+			marginBottom: `${ marginBottom }px`,
+			textAlign: align,
+		},
+	} );
 
 	/* Color palette options */
 	const colors = [
@@ -250,37 +258,21 @@ const edit = ( { attributes, setAttributes } ) => {
 			</InspectorControls>
 
 			{/* Block Preview in Editor */}
-			<div
-				style={ {
-					marginTop: `${ marginTop }px`,
-					marginBottom: `${ marginBottom }px`,
-					textAlign: align,
-				} }
-			>
-				<textarea
+			<div { ...blockProps }>
+				<RichText
 					tagName={ headingTag }
-					contentEditable={ true }
 					value={ content }
-					onChange={ ( e ) =>
-						setAttributes( { content: e.target.value } )
-					}
+					onChange={ ( value ) => setAttributes( { content: value } ) }
 					placeholder={ __( 'Enter heading text', 'six2eight' ) }
+					allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
 					style={ {
-						display: 'block',
-						width: '100%',
 						color: textColor,
 						fontSize: `${ fontSize }px`,
 						fontWeight: fontWeight,
 						lineHeight: `${ lineHeight }px`,
 						letterSpacing: `${ letterSpacing }px`,
 						fontFamily: 'Inter, sans-serif',
-						border: 'none',
-						outline: '2px solid #00B98B',
-						padding: '10px',
-						borderRadius: '4px',
-						resize: 'vertical',
-						minHeight: '100px',
-						margin: '0',
+						margin: 0,
 					} }
 				/>
 			</div>
