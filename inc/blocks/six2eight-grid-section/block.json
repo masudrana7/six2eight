@@ -70,6 +70,10 @@
 			"type": "string",
 			"default": "#2D2D34"
 		}
-	}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./index.php"
 }
 

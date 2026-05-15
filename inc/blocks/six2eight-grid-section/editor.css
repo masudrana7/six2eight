@@ -1,151 +1,206 @@
-/**
- * Six2Eight Grid Section Block - Editor Styles
- *
- * Styles for the Gutenberg editor preview only
- *
- * @package Six2Eight
- * @since 1.0.0
- */
+/* ========================================
+   SIX2EIGHT HEADING GUTENBERG BLOCK EDITOR STYLES
+======================================== */
 
-/* ===================================================
-   EDITOR STYLES - Grid Section Block
-   =================================================== */
-
-/* Main editor container */
-.six2eight-grid-section-editor {
-	/* Editor container styling */
-	border: 1px solid #e5e5e5;
-	border-radius: 8px;
-	overflow: hidden;
-	background-color: #f9f9f9;
+/* Block container in editor */
+.wp-block-six2eight-heading {
+	margin: 1em 0;
+	font-family: 'Inter', sans-serif;
 }
 
-/* Grid section header */
-.six2eight-grid-section-editor .six2eight-grid-section-header {
-	/* Header section styling */
-	padding: 24px;
+/* Alignment styles */
+.wp-block-six2eight-heading.alignleft {
+	text-align: left;
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+.wp-block-six2eight-heading.aligncenter {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-six2eight-heading.alignright {
+	text-align: right;
+	float: right;
+	margin-left: 2em;
+	margin-bottom: 1em;
+}
+
+/* Inspector panel styling */
+.components-panel {
+	background: white;
+}
+
+.components-panel__body {
 	border-bottom: 1px solid #e5e5e5;
-	background-color: #fff;
+	border-radius: 2px;
 }
 
-/* Section title in editor */
-.six2eight-grid-section-editor .six2eight-grid-section-title {
-	/* Title styling */
-	font-size: 32px;
-	font-weight: 700;
-	color: #2D2D34;
-	margin: 0;
-	padding: 0;
+/* Range control styling */
+.components-range-control {
+	margin-bottom: 16px;
 }
 
-/* Grid preview */
-.six2eight-grid-section-editor .six2eight-grid-section-grid {
-	/* Grid container styling */
-	background-color: #f9f9f9;
+/* Select control styling */
+.components-select-control {
+	margin-bottom: 16px;
 }
 
-/* Individual grid box in editor */
-.six2eight-grid-section-editor .six2eight-grid-box {
-	/* Box styling */
-	background-color: #fff;
-	border-radius: 8px;
-	padding: 20px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-	transition: all 0.3s ease;
+.components-select-control select {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+	color: #333;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 8px 12px;
+	width: 100%;
+	background: white;
 }
 
-/* Box hover state */
-.six2eight-grid-section-editor .six2eight-grid-box:hover {
-	/* Hover styling */
-	box-shadow: 0 4px 16px rgba(0, 185, 139, 0.15);
-	transform: translateY(-2px);
+.components-select-control select:hover {
+	border-color: #ccc;
 }
 
-/* Box selected state */
-.six2eight-grid-section-editor .six2eight-grid-box.selected {
-	/* Selected box styling */
-	border: 2px solid #00B98B;
-	box-shadow: 0 4px 16px rgba(0, 185, 139, 0.25);
+.components-select-control select:focus {
+	border-color: #00B98B;
+	outline: none;
+	box-shadow: 0 0 0 1px #00B98B;
 }
 
-/* Box price styling */
-.six2eight-grid-section-editor .box-price {
-	/* Price styling */
-	font-size: 28px;
-	font-weight: 700;
-	color: #00B98B;
-	margin-bottom: 8px;
+/* Text control styling */
+.components-text-control__input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
 }
 
-/* Box year styling */
-.six2eight-grid-section-editor .box-year {
-	/* Year styling */
-	font-size: 14px;
-	color: #999;
-	font-weight: 500;
-	margin-bottom: 12px;
+.components-text-control__input:focus {
+	border-color: #00B98B;
+	box-shadow: 0 0 0 1px #00B98B;
+	outline: none;
 }
 
-/* Short description */
-.six2eight-grid-section-editor .box-short-description {
-	/* Short description styling */
-	font-size: 16px;
-	font-weight: 600;
-	color: #2D2D34;
-	margin-bottom: 8px;
+/* Range control input */
+.components-range-control__input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 13px;
 }
 
-/* Full description */
-.six2eight-grid-section-editor .box-description {
-	/* Description styling */
-	font-size: 14px;
+.components-range-control__input:focus {
+	border-color: #00B98B;
+	box-shadow: 0 0 0 1px #00B98B;
+	outline: none;
+}
+
+/* Block toolbar styling */
+.block-editor-block-toolbar {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.block-editor-block-toolbar button {
 	color: #666;
-	line-height: 1.6;
+	border: 1px solid transparent;
+	background: transparent;
+	padding: 4px 8px;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
-/* ===================================================
-   RESPONSIVE EDITOR STYLES
-   =================================================== */
-
-/* Tablet breakpoint */
-@media (max-width: 768px) {
-	/* Adjust grid for tablets */
-	.six2eight-grid-section-editor .six2eight-grid-section-grid {
-		/* Tablet grid columns */
-		grid-template-columns: repeat(2, 1fr) !important;
-	}
-
-	/* Title sizing on tablet */
-	.six2eight-grid-section-editor .six2eight-grid-section-title {
-		/* Tablet title size */
-		font-size: 24px;
-	}
-
-	/* Header padding on tablet */
-	.six2eight-grid-section-editor .six2eight-grid-section-header {
-		/* Tablet header padding */
-		padding: 16px;
-	}
+.block-editor-block-toolbar button:hover {
+	background: #f5f5f5;
+	border-color: #ddd;
 }
 
-/* Mobile breakpoint */
-@media (max-width: 480px) {
-	/* Single column on mobile */
-	.six2eight-grid-section-editor .six2eight-grid-section-grid {
-		/* Mobile grid columns */
-		grid-template-columns: 1fr !important;
+.block-editor-block-toolbar button:active,
+.block-editor-block-toolbar button.is-pressed {
+	background: #00B98B;
+	color: white;
+	border-color: #00B98B;
+}
+
+/* Color palette button styling */
+.color-palette-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.color-palette-button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-palette-button.active {
+	border: 3px solid #333;
+	box-shadow: 0 0 0 1px white inset;
+}
+
+/* Panel body heading styling */
+.components-panel__body .components-panel__body-title {
+	color: #2D2D34;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+/* Label styling */
+.components-base-control__label {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	color: #333;
+	margin-bottom: 8px;
+	display: block;
+}
+
+/* Help text styling */
+.components-base-control__help {
+	font-size: 12px;
+	color: #666;
+	margin-top: 4px;
+}
+
+/* Field description */
+.components-field-description {
+	font-size: 12px;
+	color: #9C9CA7;
+	margin-top: 4px;
+	font-style: italic;
+}
+
+/* Primary color accent for focus states */
+button:focus,
+select:focus,
+input:focus,
+textarea:focus {
+	border-color: #00B98B !important;
+	box-shadow: 0 0 0 1px #00B98B !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media ( max-width: 768px ) {
+	.wp-block-six2eight-heading.alignleft,
+	.wp-block-six2eight-heading.alignright {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		text-align: left;
 	}
 
-	/* Title sizing on mobile */
-	.six2eight-grid-section-editor .six2eight-grid-section-title {
-		/* Mobile title size */
-		font-size: 20px;
-	}
-
-	/* Box padding on mobile */
-	.six2eight-grid-section-editor .six2eight-grid-box {
-		/* Mobile box padding */
-		padding: 16px;
+	.components-panel {
+		font-size: 13px;
 	}
 }
 

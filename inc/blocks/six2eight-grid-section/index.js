@@ -1,5 +1,5 @@
 /**
- * Six2Eight Grid Section Block
+ * Six2Eight Heading Block
  *
  * Main entry point for block registration
  *
@@ -15,7 +15,7 @@ import './editor.css';
 import './style.css';
 
 /**
- * Register the Six2Eight Grid Section block
+ * Register the Six2Eight Heading block
  */
 registerBlockType( metadata.name, {
 	...metadata,

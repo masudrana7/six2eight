@@ -1,350 +1,308 @@
-/**
- * Six2Eight Grid Section Block - Frontend Styles
- *
- * Professional styling for the Grid Section block on frontend
- *
- * @package Six2Eight
- * @since 1.0.0
- */
+/* ========================================
+   SIX2EIGHT HEADING GUTENBERG BLOCK STYLES
+======================================== */
 
-/* ===================================================
-   GRID SECTION BLOCK - FRONTEND STYLES
-   =================================================== */
+/* Primary heading block styles */
+.wp-block-six2eight-heading {
+	/* Font Family */
+	font-family: 'Inter', sans-serif;
 
-/* Grid section main container */
-.six2eight-grid-section {
-	/* Main container styling */
-	width: 100%;
-	padding: 60px 40px;
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-}
+	/* Default color - Primary Dark */
+	color: #2D2D34;
 
-/* Grid section header with title */
-.six2eight-grid-section-header {
-	/* Header styling */
-	width: 100%;
-	margin-bottom: 40px;
+	/* Reset default margins */
+	margin: 0;
 	padding: 0;
-	text-align: left;
+
+	/* Better text rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+
+	/* Word breaking for long text */
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
 }
 
-/* Grid section title typography */
-.six2eight-grid-section-title {
-	/* Title styling */
-	font-family: 'Inter Tight', sans-serif;
+/* H1 Heading Styles */
+.wp-block-six2eight-heading h1 {
+	/* H1 Typography */
 	font-size: 60px;
 	font-weight: 700;
 	line-height: 72px;
+
+	/* Spacing */
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	/* Color */
 	color: #2D2D34;
-	margin: 0;
-	padding: 0;
-	word-break: break-word;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
 }
 
-/* Grid container */
-.six2eight-grid-section-grid {
-	/* Grid layout */
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 32px;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	margin-bottom: 40px;
-}
-
-/* Individual grid box item */
-.six2eight-grid-box {
-	/* Box styling */
-	background-color: #fff;
-	border: 1px solid #e5e5e5;
-	border-radius: 12px;
-	padding: 32px 24px;
-	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	position: relative;
-	overflow: hidden;
-}
-
-/* Box hover state */
-.six2eight-grid-box:hover {
-	/* Hover effects */
-	border-color: #00B98B;
-	box-shadow: 0 12px 32px rgba(0, 185, 139, 0.12);
-	transform: translateY(-4px);
-}
-
-/* Box price - main element */
-.six2eight-box-price {
-	/* Price styling */
-	font-family: 'Inter Tight', sans-serif;
-	font-size: 32px;
+/* H2 Heading Styles */
+.wp-block-six2eight-heading h2 {
+	/* H2 Typography */
+	font-size: 60px;
 	font-weight: 700;
-	color: #00B98B;
-	line-height: 40px;
-	margin: 0;
-	padding: 0;
-}
+	line-height: 72px;
 
-/* Box year - secondary info */
-.six2eight-box-year {
-	/* Year styling */
-	font-family: 'Inter Tight', sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	color: #9C9CA7;
-	line-height: 20px;
-	margin: 0;
-	padding: 0;
-}
+	/* Spacing */
+	margin-top: 20px;
+	margin-bottom: 20px;
 
-/* Box short description - headline */
-.six2eight-box-short-description {
-	/* Short description styling */
-	font-family: 'Inter Tight', sans-serif;
-	font-size: 18px;
-	font-weight: 600;
+	/* Color */
 	color: #2D2D34;
-	line-height: 28px;
-	margin: 8px 0 0 0;
-	padding: 0;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
 }
 
-/* Box description - body text */
-.six2eight-box-description {
-	/* Description styling */
-	font-family: 'Inter Tight', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	color: #6B6B7B;
-	line-height: 22px;
-	margin: 0;
-	padding: 0;
+/* H3 Heading Styles */
+.wp-block-six2eight-heading h3 {
+	/* H3 Typography */
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 48px;
+
+	/* Spacing */
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
 }
 
-/* CTA Button wrapper */
-.six2eight-grid-section-button-wrapper {
-	/* Button container styling */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	margin-top: 24px;
-	padding: 0;
-}
-
-/* CTA Button styling */
-.six2eight-grid-section-button {
-	/* Button styling */
-	display: inline-block;
-	background-color: #00B98B;
-	color: #fff;
-	font-family: 'Inter Tight', sans-serif;
-	font-size: 16px;
+/* H4 Heading Styles */
+.wp-block-six2eight-heading h4 {
+	/* H4 Typography */
+	font-size: 32px;
 	font-weight: 600;
-	line-height: 24px;
-	text-decoration: none;
-	padding: 12px 32px;
-	border: 2px solid #00B98B;
-	border-radius: 6px;
-	transition: all 0.3s ease;
-	cursor: pointer;
+	line-height: 40px;
+
+	/* Spacing */
+	margin-top: 14px;
+	margin-bottom: 14px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H5 Heading Styles */
+.wp-block-six2eight-heading h5 {
+	/* H5 Typography */
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+
+	/* Spacing */
+	margin-top: 12px;
+	margin-bottom: 12px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* H6 Heading Styles */
+.wp-block-six2eight-heading h6 {
+	/* H6 Typography */
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+
+	/* Spacing */
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	/* Color */
+	color: #2D2D34;
+
+	/* Letter spacing */
+	letter-spacing: 0px;
+}
+
+/* Alignment Styles */
+
+/* Left aligned text */
+.wp-block-six2eight-heading.alignleft {
+	text-align: left;
+}
+
+/* Center aligned text */
+.wp-block-six2eight-heading.aligncenter {
 	text-align: center;
-}
-
-/* Button hover state */
-.six2eight-grid-section-button:hover {
-	/* Hover effects */
-	background-color: #008B6F;
-	border-color: #008B6F;
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(0, 185, 139, 0.2);
-}
-
-/* Button focus state for accessibility */
-.six2eight-grid-section-button:focus {
-	/* Focus effects */
-	outline: 2px solid #00B98B;
-	outline-offset: 2px;
-}
-
-/* Button active state */
-.six2eight-grid-section-button:active {
-	/* Active effects */
-	transform: translateY(0);
-}
-
-/* ===================================================
-   RESPONSIVE DESIGN - TABLETS (768px and below)
-   =================================================== */
-
-@media (max-width: 768px) {
-	/* Main container - tablet */
-	.six2eight-grid-section {
-		/* Tablet container padding */
-		padding: 40px 24px;
-	}
-
-	/* Header - tablet */
-	.six2eight-grid-section-header {
-		/* Tablet header margin */
-		margin-bottom: 32px;
-	}
-
-	/* Title - tablet */
-	.six2eight-grid-section-title {
-		/* Tablet title size */
-		font-size: 40px;
-		line-height: 48px;
-	}
-
-	/* Grid - tablet (2 columns) */
-	.six2eight-grid-section-grid {
-		/* Tablet grid columns */
-		grid-template-columns: repeat(2, 1fr);
-		gap: 24px;
-		margin-bottom: 32px;
-	}
-
-	/* Box - tablet */
-	.six2eight-grid-box {
-		/* Tablet box padding */
-		padding: 24px 20px;
-	}
-
-	/* Price - tablet */
-	.six2eight-box-price {
-		/* Tablet price size */
-		font-size: 28px;
-		line-height: 36px;
-	}
-
-	/* Short description - tablet */
-	.six2eight-box-short-description {
-		/* Tablet description size */
-		font-size: 16px;
-		line-height: 24px;
-	}
-
-	/* Description - tablet */
-	.six2eight-box-description {
-		/* Tablet body size */
-		font-size: 13px;
-		line-height: 20px;
-	}
-}
-
-/* ===================================================
-   RESPONSIVE DESIGN - MOBILE (480px and below)
-   =================================================== */
-
-@media (max-width: 480px) {
-	/* Main container - mobile */
-	.six2eight-grid-section {
-		/* Mobile container padding */
-		padding: 24px 16px;
-	}
-
-	/* Header - mobile */
-	.six2eight-grid-section-header {
-		/* Mobile header margin */
-		margin-bottom: 24px;
-	}
-
-	/* Title - mobile */
-	.six2eight-grid-section-title {
-		/* Mobile title size */
-		font-size: 28px;
-		line-height: 36px;
-	}
-
-	/* Grid - mobile (1 column) */
-	.six2eight-grid-section-grid {
-		/* Mobile grid columns */
-		grid-template-columns: 1fr;
-		gap: 16px;
-		margin-bottom: 24px;
-	}
-
-	/* Box - mobile */
-	.six2eight-grid-box {
-		/* Mobile box padding */
-		padding: 20px 16px;
-		gap: 10px;
-	}
-
-	/* Price - mobile */
-	.six2eight-box-price {
-		/* Mobile price size */
-		font-size: 24px;
-		line-height: 32px;
-	}
-
-	/* Year - mobile */
-	.six2eight-box-year {
-		/* Mobile year size */
-		font-size: 12px;
-		line-height: 18px;
-	}
-
-	/* Short description - mobile */
-	.six2eight-box-short-description {
-		/* Mobile short description size */
-		font-size: 14px;
-		line-height: 20px;
-		margin-top: 6px;
-	}
-
-	/* Description - mobile */
-	.six2eight-box-description {
-		/* Mobile description size */
-		font-size: 12px;
-		line-height: 18px;
-	}
-
-	/* Button - mobile */
-	.six2eight-grid-section-button {
-		/* Mobile button styling */
-		width: 100%;
-		padding: 12px 24px;
-		font-size: 14px;
-	}
-}
-
-/* ===================================================
-   ALIGNMENT & SPACING VARIATIONS
-   =================================================== */
-
-/* Full width alignment */
-.six2eight-grid-section.alignfull {
-	/* Full width margin/padding reset */
-	margin-left: calc( -50vw + 50% );
-	margin-right: calc( -50vw + 50% );
-	width: 100vw;
-}
-
-/* Wide alignment */
-.six2eight-grid-section.alignwide {
-	/* Wide alignment styling */
-	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* Center alignment */
-.six2eight-grid-section.aligncenter {
-	/* Center text alignment */
-	text-align: center;
+/* Right aligned text */
+.wp-block-six2eight-heading.alignright {
+	text-align: right;
 }
 
-/* Center alignment - grid */
-.six2eight-grid-section.aligncenter .six2eight-grid-section-grid {
-	/* Centered grid layout */
-	justify-items: center;
+/* Responsive typography - Tablet (768px and below) */
+@media ( max-width: 768px ) {
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 18px;
+		line-height: 26px;
+	}
 }
 
+/* Responsive typography - Mobile (1024px and below - as specified) */
+@media ( max-width: 1024px ) {
+	.wp-block-six2eight-heading {
+		/* Improved readability on smaller screens */
+		word-spacing: normal;
+	}
+
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 40px;
+		line-height: 48px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 28px;
+		line-height: 36px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 24px;
+		line-height: 32px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 20px;
+		line-height: 28px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 6px;
+		margin-bottom: 6px;
+	}
+}
+
+/* Mobile Extra Small (480px and below) */
+@media ( max-width: 480px ) {
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.wp-block-six2eight-heading h3 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	.wp-block-six2eight-heading h4 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.wp-block-six2eight-heading h5 {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.wp-block-six2eight-heading h6 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+/* State Styles */
+
+/* Focus state for editor */
+.wp-block-six2eight-heading:focus {
+	outline: 2px solid #00B98B;
+	outline-offset: 2px;
+}
+
+/* Dark mode support (if supported by WordPress theme) */
+@media ( prefers-color-scheme: dark ) {
+	.wp-block-six2eight-heading {
+		color: #FFFFFF;
+	}
+
+	.wp-block-six2eight-heading h1,
+	.wp-block-six2eight-heading h2,
+	.wp-block-six2eight-heading h3,
+	.wp-block-six2eight-heading h4,
+	.wp-block-six2eight-heading h5,
+	.wp-block-six2eight-heading h6 {
+		color: #FFFFFF;
+	}
+}
+
+/* Print styles */
+@media print {
+	.wp-block-six2eight-heading {
+		page-break-inside: avoid;
+		color: #000;
+	}
+}
+
+/* Utility classes for special cases */
+
+/* Primary color accent */
+.wp-block-six2eight-heading.is-primary {
+	color: #00B98B;
+}
+
+/* Heading with background */
+.wp-block-six2eight-heading.has-background {
+	padding: 20px;
+	border-radius: 4px;
+}
+
+/* Heading with highlight effect */
+.wp-block-six2eight-heading.highlight {
+	background: linear-gradient( 120deg, transparent 0%, rgba( 0, 185, 139, 0.1 ) 100% );
+	padding: 10px 15px;
+	border-left: 4px solid #00B98B;
+	border-radius: 0 4px 4px 0;
+}

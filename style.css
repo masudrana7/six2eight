@@ -753,9 +753,7 @@ a:hover {
     background: #ddd;
     padding: 100px 0;
 }
-.entry-content{
-    padding: 100px 0;
-}
+
 .margin-bottom-45{
     margin-bottom: 45px;
 }
@@ -922,7 +920,96 @@ a:hover {
 .six2eight-project-item.active {
     z-index: 0;
 }
+.six2eight_service_section .wp-block-cover__inner-container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.six2eight_service_section .wp-block-button__link{
+    background-color: #fff;
+    color: #2D2D34;
+    transition: 0.3s;
+}
+.six2eight_service_section .wp-block-button__link:hover{
+    background-color: var(--color-primary);
+    text-decoration: none;
+    color: #fff;
+}
+.result-left-content{
+    background-image: url(http://six2eight.local/wp-content/uploads/2026/05/Feature-Highlight-Container.webp);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    min-height: 640px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.six2eight_service_section .wp-block-columns{
+    background-color: #191818;
+    border-radius: 20px;
+    gap: 0;
+}
+.six2eight-grid-box{
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+}
+.six2eight-grid-box .six2eight-box-price{
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 8px;
+    color:#fff;
+}
 
+.six2eight-grid-box .six2eight-box-price span{
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.six2eight-grid-box .six2eight-short-description {
+    font-weight: 600;
+    font-size: 20px;
+    color: #00B98B;
+    margin-bottom: 18px;
+}
+
+.six2eight-grid-box .six2eight-description {
+    color: #fff;
+}
+.grid-section-4,
+.grid-section-1{
+    background-image: url(http://six2eight.local/wp-content/uploads/2026/05/Icon-Container.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.grid-section-1{
+    border-bottom: 1px solid #3B3B44;
+    border-right: 1px solid #3B3B44;
+}
+.grid-section-2{
+    border-bottom: 1px solid #3B3B44;
+}
+
+.grid-section-3{
+    border-right: 1px solid #3B3B44;
+}
+
+.grid-section-3 {
+    border-right: 1px solid #3B3B44;
+}
+.result-left-content {
+    border-radius: 20px 20px 0 0;
+    min-height: 440px;
+}
 /* ========================================
    RESPONSIVE PROJECT WIDGET
    ======================================== */
@@ -964,6 +1051,13 @@ a:hover {
         font-size: 14px;
         line-height: 20px;
     }
+    .grid-section-3 {
+        border-bottom: 1px solid #3B3B44;
+    }
+    .six2eight_service_section .wp-block-heading{
+        font-size: 38px !important;
+        line-height: 1.4;
+    }
 }
 
 /* Mobile Breakpoint - 480px */
@@ -979,3 +1073,4 @@ a:hover {
         -webkit-line-clamp: 2;
     }
 }
+

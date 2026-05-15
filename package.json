@@ -9,7 +9,9 @@
     "build:heading": "wp-scripts build inc/blocks/six2eight-heading/index.js --output-path=inc/blocks/six2eight-heading/build",
     "start:heading": "wp-scripts start inc/blocks/six2eight-heading/index.js --output-path=inc/blocks/six2eight-heading/build",
     "build:project": "wp-scripts build inc/blocks/six2eight-project/index.js --output-path=inc/blocks/six2eight-project/build",
-    "start:project": "wp-scripts start inc/blocks/six2eight-project/index.js --output-path=inc/blocks/six2eight-project/build"
+    "start:project": "wp-scripts start inc/blocks/six2eight-project/index.js --output-path=inc/blocks/six2eight-project/build",
+    "build:grid": "wp-scripts build inc/blocks/six2eight-grid-section/index.js --output-path=inc/blocks/six2eight-grid-section/build",
+    "start:grid": "wp-scripts start inc/blocks/six2eight-grid-section/index.js --output-path=inc/blocks/six2eight-grid-section/build"
   },
   "repository": {
     "type": "git",

@@ -11,14 +11,13 @@ import {
 	RichText,
 	BlockControls,
 	InspectorControls,
-	ColorPalette,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
 	TextControl,
 	RangeControl,
 	Button,
-	ButtonGroup,
+	TextareaControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import './editor.css';
@@ -190,12 +189,17 @@ export default function Edit( { attributes, setAttributes } ) {
 
 						{/* Edit Current Selected Box */}
 						{ boxContent[ selectedBoxIndex ] && (
-							<div style={ { border: '1px solid #ddd', padding: '12px', borderRadius: '4px' } }>
+							<div style={ { border: '1px solid #ddd', padding: '12px', borderRadius: '4px', backgroundColor: '#f9f9f9' } }>
+								<h4 style={ { marginTop: 0, marginBottom: '12px' } }>
+									{ __( 'Box Content', 'six2eight' ) }
+								</h4>
+
 								<TextControl
 									label={ __( 'Price', 'six2eight' ) }
 									value={ boxContent[ selectedBoxIndex ].price }
 									onChange={ ( value ) => updateBoxField( selectedBoxIndex, 'price', value ) }
 									placeholder={ __( 'e.g. $99', 'six2eight' ) }
+									help={ __( 'Enter price or value', 'six2eight' ) }
 								/>
 
 								<TextControl
@@ -203,6 +207,7 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ boxContent[ selectedBoxIndex ].year }
 									onChange={ ( value ) => updateBoxField( selectedBoxIndex, 'year', value ) }
 									placeholder={ __( 'e.g. 2024', 'six2eight' ) }
+									help={ __( 'Enter year or period', 'six2eight' ) }
 								/>
 
 								<TextControl
@@ -212,14 +217,16 @@ export default function Edit( { attributes, setAttributes } ) {
 										updateBoxField( selectedBoxIndex, 'shortDescription', value )
 									}
 									placeholder={ __( 'Brief description', 'six2eight' ) }
+									help={ __( 'Short headline text', 'six2eight' ) }
 								/>
 
-								<TextControl
+								<TextareaControl
 									label={ __( 'Description', 'six2eight' ) }
 									value={ boxContent[ selectedBoxIndex ].description }
 									onChange={ ( value ) => updateBoxField( selectedBoxIndex, 'description', value ) }
 									placeholder={ __( 'Full description', 'six2eight' ) }
 									help={ __( 'Detailed description for this box', 'six2eight' ) }
+									rows="4"
 								/>
 
 								{/* Action Buttons */}
